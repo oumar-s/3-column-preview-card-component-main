@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://oumar-s.github.io/3-column-preview-card-component-main/)
 - Live Site URL: [Live Site](https://oumar-s.github.io/3-column-preview-card-component-main/)
 
 ## My process
