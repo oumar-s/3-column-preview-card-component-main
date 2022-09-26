@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+:root{
+    --background-and-heading-color: hsl(0, 0%, 95%);
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --sedan-main-color: hsl(31, 77%, 52%);
+    --suv-main-color: hsl(184, 100%, 22%);
+    --luxury-main-color: hsl(179, 100%, 13%);
+    --contant-padding: 30px;
+    --contant-margin-bottom: 20px;
+
+
+}
+
+body{
+    background-color: var(--background-and-heading-color);
+}
+h1{
+    color: var(--background-and-heading-color);
+    font-family: 'Big Shoulders Display';
+    font-weight: 700px;
+    margin-bottom: var(--contant-margin-bottom);
+
+}
+p{
+    color: var(--paragraph-color);
+    font-size: 14px;
+    font-family: 'Lexend Deca';
+    font-weight: 400px;
+    line-height: 20px;
+    margin-bottom: var(--contant-margin-bottom);
+
+}
+
+svg{
+    margin: 20px 0px;
+
+}
+button{
+    font-family: 'Lexend Deca';
+    background-color: var(--background-and-heading-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-style: none;
+    margin-bottom:var(--contant-margin-bottom);
+}
+Button:hover{
+    background-color:rgb(161, 162, 164);
+
+}
+
+#sedanButton{
+    color: var(--sedan-main-color);
+    cursor: pointer;
+}
+
+#SUVButton{
+    color: var(--suv-main-color);
+    cursor: pointer;
+
+}
+#luxuryButton{
+    color: var(--luxury-main-color);
+    cursor: pointer;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    margin: 40px 20px;
+}
+
+.sedanWrapper{
+    background-color: var(--sedan-main-color);
+    padding: var(--contant-padding);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.SUVWrapper{
+    background-color: var(--suv-main-color);
+    padding: var(--contant-padding);
+
+}
+
+.luxuryWrapper{
+    background-color: var(--luxury-main-color);
+    padding: var(--contant-padding);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+    
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 780px){
+
+    
+    body{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .containerWrapper{
+        height: 70%;
+        margin: auto;
+    }
+    .container{
+
+        display: grid;
+        grid-template-areas: 'sedan suv luxury';
+        width: 85%;
+        margin: auto;
+        max-width: 780px;
+        
+        
+    }
+    button{
+        
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+    .sedanWrapper{
+        background-color: var(--sedan-main-color);
+        padding: var(--contant-padding);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+
+        grid-area: sedan;
+    }
+
+    .luxuryWrapper{
+        background-color: var(--luxury-main-color);
+        padding: var(--contant-padding);
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        grid-area: luxury;
+    }
+    .SUVWrapper{
+        grid-area: suv;
+
+    }
+    
+    
+}
